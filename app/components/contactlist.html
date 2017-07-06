@@ -1,0 +1,21 @@
+Contacts List:
+      <table border='2' class='table-hovered'>
+        <div *ngFor="let contact of contacts" 
+             (click)="selectedContact(contact)" >
+
+        <span style="margin:20px"
+            [class.clicked]="showDetails" >      
+      <tr>
+        <td> 
+        <a href="#" [routerLink]="['/show', contact.name]">
+          {{contact.name}}
+        </a>   &nbsp; &nbsp; &nbsp;
+        </td>
+            <td>  {{contact.email}} </td>  &nbsp; &nbsp; &nbsp;
+            <td>  {{contact.phone}} </td>
+     </tr>     
+     </span>
+  </div>
+  </table>
+
+  
